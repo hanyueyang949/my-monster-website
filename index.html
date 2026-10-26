@@ -20,36 +20,73 @@
         </nav>
     </header>
 
-    <section class="intro">
-        <h2>The Skydiving Monster</h2>
-        <p>
-            Meet my monster! He loves traveling the world and his favorite hobby is skydiving from the highest clouds.
-            He's a happy traveler who brings joy wherever he lands. Despite his scary appearance,
-            he's actually very friendly and loves making new friends!
-        </p>
-    </section>
+    <div class="main-container">
+        <div class="left-column">
+            <section class="intro">
+                <h2>The Skydiving Monster</h2>
+                <p>
+                    Meet my monster! He loves traveling the world and his favorite hobby is skydiving from the highest clouds.
+                    He's a happy traveler who brings joy wherever he lands. Despite his scary appearance,
+                    he's actually very friendly and loves making new friends!
+                </p>
+            </section>
 
-    <div id="game-area">
-        <div id="monster">
-            <div id="speech-bubble">Hello!</div>
-            <div class="eye left"><div class="pupil"></div></div>
-            <div class="eye right"><div class="pupil"></div></div>
-            <div class="nose"></div>
-            <div class="fire" id="fire"></div>
-            <div class="mouth">
-            </div>
-            <div class="arm left"></div>
-            <div class="arm right"></div>
-            <div class="leg left"></div>
-            <div class="leg right"></div>
+            <section class="abilities">
+                <h2>🌟 Special Abilities</h2>
+                <div class="ability-grid">
+                    <div class="ability-card">
+                        <div class="ability-icon">🎭</div>
+                        <h3>Emotion Shifting</h3>
+                        <p>The monster can instantly change its mood to match the vibe of the room. Whether he's feeling joyful, grumpy, or completely surprised, his facial expressions evolve in real-time!</p>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">🎨</div>
+                        <h3>Chromatic Adaptation</h3>
+                        <p>To blend into different environments during his travels, the monster can shift his entire skin color. From lime green to deep purple, he's a master of camouflage!</p>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">🔥</div>
+                        <h3>Pyrokinesis Power</h3>
+                        <p>When excited or feeling powerful, the monster can summon a blast of fire from his mouth. This fire is used mainly for lighting campfires during his worldwide adventures.</p>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">🗣️</div>
+                        <h3>Multilingual Speech</h3>
+                        <p>Having visited every continent, the monster can speak in various tones and phrases, sharing stories of his skydiving jumps and the funny things he's seen from above.</p>
+                    </div>
+                    <div class="ability-card">
+                        <div class="ability-icon">💃</div>
+                        <h3>Hyper-Mobility</h3>
+                        <p>The monster possesses an incredible ability to move his limbs in unpredictable ways. He can dance, jump, and shake his body whenever he's feeling the energy of the page!</p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
 
-    <div class="controls">
-        <button onclick="changeEmotion()">Emotions</button>
-        <button onclick="monsterSpeak()">Speak</button>
-        <button onclick="powerUp()">Power</button>
-        <button onclick="changeColor()">Color</button>
+        <div class="right-column">
+            <div id="game-area">
+                <div id="monster">
+                    <div id="speech-bubble">Hello!</div>
+                    <div class="eye left"><div class="pupil"></div></div>
+                    <div class="eye right"><div class="pupil"></div></div>
+                    <div class="nose"></div>
+                    <div class="fire" id="fire"></div>
+                    <div class="mouth">
+                    </div>
+                    <div class="arm left"></div>
+                    <div class="arm right"></div>
+                    <div class="leg left"></div>
+                    <div class="leg right"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button onclick="changeEmotion()">Emotions</button>
+                <button onclick="monsterSpeak()">Speak</button>
+                <button onclick="powerUp()">Power</button>
+                <button onclick="changeColor()">Color</button>
+            </div>
+        </div>
     </div>
 
     <footer>

@@ -16,6 +16,45 @@ body {
     cursor: pointer;
 }
 
+/* Main Layout */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-column {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 20px;
+}
+
+.left-column .intro {
+    text-align: left;
+}
+
+.left-column .abilities {
+    text-align: left;
+}
+
+.left-column .abilities h2 {
+    text-align: left;
+}
+
 /* Header & Nav */
 header {
     width: 100%;
@@ -25,6 +64,7 @@ header {
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
 
 nav {
     display: flex;
@@ -258,3 +298,58 @@ footer {
 .sad .mouth { height: 10px; border-radius: 30px 30px 0 0; top: 120px; }
 .angry .eye { transform: rotate(10deg); }
 .angry .eye.right { transform: rotate(-10deg); }
+
+/* Abilities Section */
+.abilities {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1000px;
+}
+
+.abilities h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.ability-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    justify-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ability-card {
+    background: white;
+    border: 3px solid #333;
+    border-radius: 20px;
+    padding: 25px;
+    width: 250px;
+    box-shadow: 6px 6px 0px #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ability-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 0px #333;
+}
+
+.ability-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.ability-card h3 {
+    margin: 10px 0;
+    font-size: 1.4rem;
+    color: #4a90e2;
+}
+
+.ability-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
