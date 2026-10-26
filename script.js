@@ -45,10 +45,22 @@ function changeColor() {
     document.documentElement.style.setProperty('--monster-color', colors[currentColorIdx]);
 }
 
+// Contact Logic
+function toggleContact() {
+    const portal = document.getElementById('contact-portal');
+    portal.style.display = (portal.style.display === 'flex') ? 'none' : 'flex';
+}
+
+function handleContactSubmit(event) {
+    event.preventDefault();
+    alert("🚀 Message launched! The monster has received your details and will contact you as soon as he lands from his next skydive!");
+    toggleContact();
+}
+
 // Move monster on click
 document.body.addEventListener('click', (e) => {
-    // Prevent trigger on buttons
-    if (e.target.tagName === 'BUTTON') return;
+    // Prevent trigger on buttons or modal content
+    if (e.target.closest('.controls') || e.target.closest('.contact-modal') || e.target.tagName === 'BUTTON') return;
 
     const x = (Math.random() - 0.5) * 40;
     const y = (Math.random() - 0.5) * 40;
@@ -78,3 +90,4 @@ document.body.addEventListener('click', (e) => {
         p.style.transform = `translate(${Math.cos(angle)*dist}px, ${Math.sin(angle)*dist}px)`;
     });
 });
+

@@ -16,14 +16,55 @@
                 <span style="font-weight: bold;">My Monster</span>
             </div>
             <a href="#">Home</a>
-            <a href="#">Contact</a>
+            <a href="#" onclick="toggleContact()">Contact</a>
         </nav>
     </header>
+
+    <div id="contact-portal" class="contact-overlay">
+        <div class="contact-modal">
+            <span class="close-btn" onclick="toggleContact()">&times;</span>
+            <h2>📨 Monster Mailbox</h2>
+            <p>Want to plan a skydive? Or maybe you have some exotic snacks for the monster? Leave your details and we'll send a carrier pigeon (or a text) your way ASAP!</p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                <div class="input-group">
+                    <label>Your Human Name</label>
+                    <input type="text" placeholder="What do they call you?" required>
+                </div>
+
+                <div class="input-group">
+                    <label>How should we reach you?</label>
+                    <div class="contact-options">
+                        <label class="option-card">
+                            <input type="radio" name="contact-method" value="whatsapp" checked>
+                            <span class="option-text">WhatsApp 🟢</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="contact-method" value="phone">
+                            <span class="option-text">Phone Call 📞</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Your Magic Number</label>
+                    <input type="tel" placeholder="+1 234 567 890" required>
+                </div>
+
+                <div class="input-group">
+                    <label>A Secret Message</label>
+                    <textarea placeholder="Tell us something interesting..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send to Monster! 🚀</button>
+            </form>
+        </div>
+    </div>
 
     <div class="main-container">
         <div class="left-column">
             <section class="intro">
-                <h2>The Skydiving Monster</h2>
+                <h2 class="section-title">The Skydiving Monster</h2>
                 <p>
                     Meet my monster! He loves traveling the world and his favorite hobby is skydiving from the highest clouds.
                     He's a happy traveler who brings joy wherever he lands. Despite his scary appearance,
@@ -32,31 +73,31 @@
             </section>
 
             <section class="abilities">
-                <h2>🌟 Special Abilities</h2>
+                <h2 class="section-title">🌟 Special Abilities</h2>
                 <div class="ability-grid">
                     <div class="ability-card">
                         <div class="ability-icon">🎭</div>
-                        <h3>Emotion Shifting</h3>
+                        <h3 class="ability-name">Emotion Shifting</h3>
                         <p>The monster can instantly change its mood to match the vibe of the room. Whether he's feeling joyful, grumpy, or completely surprised, his facial expressions evolve in real-time!</p>
                     </div>
                     <div class="ability-card">
                         <div class="ability-icon">🎨</div>
-                        <h3>Chromatic Adaptation</h3>
+                        <h3 class="ability-name">Chromatic Adaptation</h3>
                         <p>To blend into different environments during his travels, the monster can shift his entire skin color. From lime green to deep purple, he's a master of camouflage!</p>
                     </div>
                     <div class="ability-card">
                         <div class="ability-icon">🔥</div>
-                        <h3>Pyrokinesis Power</h3>
+                        <h3 class="ability-name">Pyrokinesis Power</h3>
                         <p>When excited or feeling powerful, the monster can summon a blast of fire from his mouth. This fire is used mainly for lighting campfires during his worldwide adventures.</p>
                     </div>
                     <div class="ability-card">
                         <div class="ability-icon">🗣️</div>
-                        <h3>Multilingual Speech</h3>
+                        <h3 class="ability-name">Multilingual Speech</h3>
                         <p>Having visited every continent, the monster can speak in various tones and phrases, sharing stories of his skydiving jumps and the funny things he's seen from above.</p>
                     </div>
                     <div class="ability-card">
                         <div class="ability-icon">💃</div>
-                        <h3>Hyper-Mobility</h3>
+                        <h3 class="ability-name">Hyper-Mobility</h3>
                         <p>The monster possesses an incredible ability to move his limbs in unpredictable ways. He can dance, jump, and shake his body whenever he's feeling the energy of the page!</p>
                     </div>
                 </div>
@@ -87,6 +128,7 @@
                 <button onclick="changeColor()">Color</button>
             </div>
         </div>
+    </div>
     </div>
 
     <footer>
